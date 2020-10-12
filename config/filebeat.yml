@@ -1,4 +1,4 @@
-filebeat.inputs:
+filebeat.prospectors:
   # - type: container
   #   stream: all
   #   paths:
