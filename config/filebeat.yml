@@ -1,7 +1,7 @@
 filebeat.inputs:
   - type: log
     paths:
-      - '/usr/share/filebeat/mock-logs/some.log'
+      - '/usr/share/dockerlogs/data/*/*.log'
   # - type: container
   #   stream: all
   #   paths:
@@ -40,9 +40,9 @@ filebeat.inputs:
     # processors:
     # - add_docker_metadata: ~
   
-processors:
-  - add_docker_metadata:
-      host: "unix:///var/run/docker.sock"
+# processors:
+#   - add_docker_metadata:
+#       host: "unix:///var/run/docker.sock"
 
 # filebeat.config.modules:
 #   path: ${path.config}/modules.d/*.yml
@@ -50,7 +50,7 @@ processors:
 
 output.kafka:
     hosts: ["10.3.133.190:9092"]
-    topic: 'KUclap-logs2'
+    topic: 'KUclap-logs'
     partition.round_robin:
       reachable_only: false
     required_acks: 1
