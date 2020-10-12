@@ -49,7 +49,7 @@ filebeat.inputs:
 #   reload.enabled: false
 
 output.kafka:
-    hosts: ["10.3.133.190:9092"]
+    hosts: ["http://10.3.133.190:9092"]
     topic: 'KUclap-logs'
     partition.round_robin:
       reachable_only: false
