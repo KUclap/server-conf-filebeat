@@ -50,11 +50,13 @@ processors:
 
 output.kafka:
     hosts: ["10.3.133.190:9092"]
-    topic: 'KUclap-logs'
+    topic: 'KUclap-logs2'
     partition.round_robin:
       reachable_only: false
     required_acks: 1
     compression: gzip
+    max_retries: 2
+    max_message_bytes: 1000000
     # max_message_bytes: 1000000
   # topics:
   #   - topic: "error"
