@@ -1,10 +1,14 @@
 filebeat.inputs:
-  - type: log
+  - type: container
+    stream: all
     paths:
     - '/usr/share/dockerlogs/data/*/*.log'
     json.message_key: log
     json.keys_under_root: true
-    # close_inactive: 10m
+    json.add_error_key: true
+    exclude_files: ['\.gz$']
+    close_inactive: 2h
+    harvester_limit: 2
     # processors:
     # - add_docker_metadata: ~
       
