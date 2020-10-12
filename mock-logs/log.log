@@ -1,7 +1,28 @@
-Hello
-This
-is
-KUclap
-mock
-logs
-:DDDDD
+NEW1
+NEW1
+NEW1
+NEW1NEW1NEW1
+NEW1
+NEW1
+{"log":"Loading settings from ./runner.conf\r\n","stream":"stdout","time":"2020-10-08T14:13:28.618709393Z"}
+{"log":"\u001b[32m14:13:28 runner      |\u001b[0m InitFolders\r\n","stream":"stdout","time":"2020-10-08T14:13:28.618807541Z"}
+{"log":"\u001b[32m14:13:28 runner      |\u001b[0m mkdir ./tmp\r\n","stream":"stdout","time":"2020-10-08T14:13:28.619009982Z"}
+{"log":"\u001b[32m14:13:28 runner      |\u001b[0m mkdir ./tmp: file exists\r\n","stream":"stdout","time":"2020-10-08T14:13:28.619017833Z"}
+{"log":"\u001b[35m14:13:28 watcher     |\u001b[0m Watching .\r\n","stream":"stdout","time":"2020-10-08T14:13:28.61902582Z"}
+{"log":"\u001b[35m14:13:28 watcher     |\u001b[0m Watching config\r\n","stream":"stdout","time":"2020-10-08T14:13:28.619031725Z"}
+{"log":"\u001b[35m14:13:28 watcher     |\u001b[0m Watching dao\r\n","stream":"stdout","time":"2020-10-08T14:13:28.619037942Z"}
+{"log":"\u001b[35m14:13:28 watcher     |\u001b[0m Watching docker\r\n","stream":"stdout","time":"2020-10-08T14:13:28.61905846Z"}
+{"log":"\u001b[35m14:13:28 watcher     |\u001b[0m Watching middleware\r\n","stream":"stdout","time":"2020-10-08T14:13:28.619065497Z"}
+{"log":"\u001b[35m14:13:28 watcher     |\u001b[0m Watching models\r\n","stream":"stdout","time":"2020-10-08T14:13:28.619071079Z"}
+{"log":"\u001b[35m14:13:28 watcher     |\u001b[0m Watching utillitys\r\n","stream":"stdout","time":"2020-10-08T14:13:28.61907631Z"}
+{"log":"\u001b[36m14:13:28 main        |\u001b[0m Waiting (loop 1)...\r\n","stream":"stdout","time":"2020-10-08T14:13:28.61908175Z"}
+{"log":"\u001b[36m14:13:28 main        |\u001b[0m receiving first event /\r\n","stream":"stdout","time":"2020-10-08T14:13:28.619087118Z"}
+{"log":"\u001b[36m14:13:28 main        |\u001b[0m sleeping for 600 milliseconds\r\n","stream":"stdout","time":"2020-10-08T14:13:28.61909287Z"}
+NEW1NEW1
+NEW1
+NEW1NEW1NEW1
+NEW1NEW1NEW1NEW1NEW1
+NEW1NEW1NEW1NEW1
+NEW1NEW1NEW1
+
+

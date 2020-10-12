@@ -31,7 +31,7 @@ filebeat.inputs:
 
   - type: log
     paths:
-    - '/usr/share/dockerlogs/data/*/*.log'
+    - '/usr/share/filebeat/mock-logs/*.log'
     json.message_key: log
     json.keys_under_root: true
     processors:
