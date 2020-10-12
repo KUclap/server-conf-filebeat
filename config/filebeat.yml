@@ -5,10 +5,10 @@ filebeat.inputs:
     # - '/var/log/docker.log'
     # - './mock-logs/*.log'
     - '/var/lib/docker/containers/*/*.log'
-    # json.message_key: log
-    # json.keys_under_root: true
-    # processors:
-    # - add_docker_metadata: ~
+    json.message_key: log
+    json.keys_under_root: true
+    processors:
+    - add_docker_metadata: ~
 output.kafka:
     hosts: ["10.3.133.190:9092"]
     topic: 'KUclap-logs'
