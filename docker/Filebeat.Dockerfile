@@ -9,9 +9,10 @@
 
 FROM docker.elastic.co/beats/filebeat:7.9.2
 COPY config/filebeat.yml /usr/share/filebeat/filebeat.yml
-COPY ./mock-logs /usr/share/filebeat/dockerlogs/data
+
 USER root
 # RUN chown root:filebeat /usr/share/filebeat/filebeat.yml
 RUN mkdir /usr/share/filebeat/dockerlogs
+COPY ./mock-logs /usr/share/filebeat/dockerlogs/data
 RUN chown -R root /usr/share/filebeat/
 # RUN chmod -R go-w /usr/share/filebeat/
