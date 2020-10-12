@@ -5,7 +5,7 @@ filebeat.inputs:
       - add_docker_metadata: ~
     containers:
       path: "/usr/share/dockerlogs/data"
-      stream: "all"
+      stream: "stdout"
       ids:
         - "*"
       cri.parse_flags: true
@@ -22,9 +22,9 @@ processors:
   - add_docker_metadata:
       host: "unix:///var/run/docker.sock"
 
-# filebeat.config.modules:
-#   path: ${path.config}/modules.d/*.yml
-#   reload.enabled: false
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
 
 output.kafka:
     hosts: ["10.3.133.190:9092"]
