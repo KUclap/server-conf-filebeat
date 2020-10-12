@@ -1,0 +1,26 @@
+filebeat.inputs:
+  - type: log
+    paths:
+      # - '/logs/*/*.log'
+    # - '/var/log/docker.log'
+    # - './mock-logs/*.log'
+    - '/var/lib/docker/containers/*/*.log'
+    # json.message_key: log
+    # json.keys_under_root: true
+    # processors:
+    # - add_docker_metadata: ~
+output.kafka:
+    hosts: ["10.3.133.190:9092"]
+    topic: 'KUclap-logs'
+    partition.round_robin:
+      reachable_only: false
+    required_acks: 1
+    compression: gzip
+    max_message_bytes: 1000000
+  # topics:
+  #   - topic: "error"
+  #     when.contains:
+  #       message: "ERR"
+  #   - topic: "access"
+  #     when contains:
+  #       message: "\"GET .*\" 200" #Apache access logs use a GET request in combination with some HTTP data and a 200 code afterward. Backslashes in YAML indicate the following character should be read as text, not syntax
