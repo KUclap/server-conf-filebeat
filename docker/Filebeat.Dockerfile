@@ -12,7 +12,7 @@ COPY config/filebeat.yml /usr/share/filebeat/filebeat.yml
 
 USER root
 # RUN chown root:filebeat /usr/share/filebeat/filebeat.yml
-RUN mkdir /usr/share/filebeat/dockerlogs
+RUN mkdir /usr/share/filebeat/dockerlogs/data
 COPY ./mock-logs /usr/share/filebeat/dockerlogs/data
 RUN chown -R root /usr/share/filebeat/
 # RUN chmod -R go-w /usr/share/filebeat/
