@@ -1,8 +1,8 @@
 filebeat.inputs:
   - type: log
     paths:
-      # - '/usr/share/dockerlogs/data/*/*.log'
-      - '/var/lib/docker/containers/*/*.log'
+      - '/usr/share/dockerlogs/data/*/*.log'
+      # - '/var/lib/docker/containers/*/*.log'
   # - type: container
   #   stream: all
   #   paths:
