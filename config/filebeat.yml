@@ -5,7 +5,7 @@ filebeat.inputs:
     - '/usr/share/dockerlogs/data/*/*.log'
     json.message_key: log
     json.keys_under_root: true
-    json.add_error_key: true
+    # json.add_error_key: true
     exclude_files: ['\.gz$']
     close_inactive: 2h
     harvester_limit: 2
