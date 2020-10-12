@@ -1,4 +1,7 @@
 filebeat.inputs:
+  - type: log
+    paths:
+      - '/usr/share/filebeat/mock-logs/some.log'
   # - type: container
   #   stream: all
   #   paths:
@@ -29,11 +32,11 @@ filebeat.inputs:
   #     # json.keys_under_root: true
   #     harvester_limit: 2
 
-  - type: log
-    paths:
-    - '/usr/share/filebeat/mock-logs/*.log'
-    json.message_key: log
-    json.keys_under_root: true
+  # - type: log
+  #   paths:
+  #   - '/usr/share/filebeat/mock-logs/some.log'
+    # json.message_key: log
+    # json.keys_under_root: true
     # processors:
     # - add_docker_metadata: ~
   
