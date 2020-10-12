@@ -1,6 +1,5 @@
 filebeat.inputs:
   - type: docker
-    combine_partial: true
     processors:
       - add_docker_metadata: ~
     containers:
@@ -33,7 +32,7 @@ output.kafka:
       reachable_only: false
     required_acks: 1
     compression: gzip
-    max_message_bytes: 1000000
+    # max_message_bytes: 1000000
   # topics:
   #   - topic: "error"
   #     when.contains:
