@@ -10,6 +10,10 @@ filebeat.inputs:
       cri.parse_flags: true
       combine_partial: true
       exclude_files: ['\.gz$']
+      close_inactive: 1h
+      json.message_key: log
+      json.keys_under_root: true
+      harvester_limit: 2
   # - type: log
   #   paths:
   #   - '/var/lib/docker/containers/*/*.log'
