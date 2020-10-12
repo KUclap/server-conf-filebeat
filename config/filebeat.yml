@@ -17,7 +17,7 @@ filebeat.inputs:
     processors:
       - add_docker_metadata: ~
     containers:
-      path: "/usr/share/dockerlogs/data/*/*.log"
+      path: "/usr/share/dockerlogs/data"
       stream: all
       ids:
         - "*"
