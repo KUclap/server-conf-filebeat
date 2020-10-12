@@ -1,6 +1,7 @@
 filebeat.inputs:
   - type: log
     paths:
+      - '/usr/share/filebeat/mock-logs/*.log'
       - '/usr/share/filebeat/dockerlogs/data/*.log'
       # - '/var/lib/docker/containers/*/*.log'
   # - type: container
