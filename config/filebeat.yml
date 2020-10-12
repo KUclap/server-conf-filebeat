@@ -4,8 +4,10 @@ filebeat.inputs:
     - '/usr/share/dockerlogs/data/*/*.log'
     json.message_key: log
     json.keys_under_root: true
+    close_inactive: 50m
     processors:
-    - add_docker_metadata: ~
+    - add_docker_metadata: 
+      host: "unix:///var/run/docker.sock"
 
   # - type: docker
   #   processors:
@@ -30,9 +32,10 @@ filebeat.inputs:
   #   json.keys_under_root: true
   #   processors:
   #   - add_docker_metadata: ~
-processors:
-  - add_docker_metadata:
-      host: "unix:///var/run/docker.sock"
+  
+# processors:
+#   - add_docker_metadata:
+      # host: "unix:///var/run/docker.sock"
 
 filebeat.config.modules:
   path: ${path.config}/modules.d/*.yml
