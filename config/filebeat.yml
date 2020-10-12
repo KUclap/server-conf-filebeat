@@ -1,9 +1,10 @@
 filebeat.inputs:
-  - type: docker
+  - type: log
+  # - type: docker
     processors:
       - add_docker_metadata: ~
     containers:
-      path: "/usr/share/dockerlogs/data"
+      path: "/usr/share/dockerlogs/data/*/*.log"
       stream: "stdout"
       ids:
         - "*"
