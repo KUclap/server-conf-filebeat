@@ -1,9 +1,3 @@
-NEW1
-NEW1
-NEW1
-NEW1NEW1NEW1
-NEW1
-NEW1
 {"log":"Loading settings from ./runner.conf\r\n","stream":"stdout","time":"2020-10-08T14:13:28.618709393Z"}
 {"log":"\u001b[32m14:13:28 runner      |\u001b[0m InitFolders\r\n","stream":"stdout","time":"2020-10-08T14:13:28.618807541Z"}
 {"log":"\u001b[32m14:13:28 runner      |\u001b[0m mkdir ./tmp\r\n","stream":"stdout","time":"2020-10-08T14:13:28.619009982Z"}
@@ -18,11 +12,3 @@ NEW1
 {"log":"\u001b[36m14:13:28 main        |\u001b[0m Waiting (loop 1)...\r\n","stream":"stdout","time":"2020-10-08T14:13:28.61908175Z"}
 {"log":"\u001b[36m14:13:28 main        |\u001b[0m receiving first event /\r\n","stream":"stdout","time":"2020-10-08T14:13:28.619087118Z"}
 {"log":"\u001b[36m14:13:28 main        |\u001b[0m sleeping for 600 milliseconds\r\n","stream":"stdout","time":"2020-10-08T14:13:28.61909287Z"}
-NEW1NEW1
-NEW1
-NEW1NEW1NEW1
-NEW1NEW1NEW1NEW1NEW1
-NEW1NEW1NEW1NEW1
-NEW1NEW1NEW1
-
-
