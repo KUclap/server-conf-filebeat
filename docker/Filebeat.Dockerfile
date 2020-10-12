@@ -1,8 +1,8 @@
 FROM docker.elastic.co/beats/filebeat:7.9.2
 COPY config/filebeat.yml /usr/share/filebeat/filebeat.yml
 USER root
-RUN chown -R root /usr/share/filebeat/
-RUN chown root:filebeat /usr/share/filebeat/filebeat.yml
+# RUN chown -R root /usr/share/filebeat/
+RUN chown -R root:filebeat /usr/share/filebeat/
 USER filebeat
 
 # FROM docker.elastic.co/beats/filebeat:7.9.2
