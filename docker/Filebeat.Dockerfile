@@ -11,4 +11,4 @@ USER root
 # RUN chown root:filebeat /usr/share/filebeat/filebeat.yml
 RUN mkdir /usr/share/filebeat/dockerlogs
 RUN chown -R root /usr/share/filebeat/
-RUN chmod -R go-w /usr/share/filebeat/
+# RUN chmod -R go-w /usr/share/filebeat/
