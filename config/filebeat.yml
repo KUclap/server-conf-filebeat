@@ -4,7 +4,7 @@ filebeat.inputs:
     - '/usr/share/dockerlogs/data/*/*.log'
     json.message_key: log
     json.keys_under_root: true
-    close_inactive: 30m
+    # close_inactive: 10m
     processors:
     - add_docker_metadata: ~
       
