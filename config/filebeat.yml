@@ -4,10 +4,13 @@ filebeat.inputs:
     processors:
       - add_docker_metadata: ~
     containers:
-      path: "/usr/share/filebeat/data-logs"
+      path: "/usr/share/dockerlogs/data"
       stream: "all"
       ids:
         - "*"
+      # cri.parse_flags: true
+      # combine_partial: true
+      # exclude_files: ['\.gz$']
   # - type: log
   #   paths:
   #   - '/var/lib/docker/containers/*/*.log'
@@ -15,6 +18,14 @@ filebeat.inputs:
   #   json.keys_under_root: true
   #   processors:
   #   - add_docker_metadata: ~
+processors:
+  - add_docker_metadata:
+      host: "unix:///var/run/docker.sock"
+
+# filebeat.config.modules:
+#   path: ${path.config}/modules.d/*.yml
+#   reload.enabled: false
+
 output.kafka:
     hosts: ["10.3.133.190:9092"]
     topic: 'KUclap-logs'
