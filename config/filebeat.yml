@@ -65,7 +65,7 @@ output.kafka:
     topic: 'KUclap-logs'
     partition.round_robin:
       reachable_only: false
-    required_acks: 1
+    # required_acks: 1
     compression: gzip
     max_retries: 2
     max_message_bytes: 1000000
