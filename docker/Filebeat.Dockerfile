@@ -7,7 +7,7 @@ RUN chown root /usr/share/filebeat/
 COPY ./mock-logs /usr/share/filebeat/mock-logs
 # RUN chown -R root:filebeat /usr/share/filebeat/
 # RUN chmod -R go-w /usr/share/filebeat/
-# USER filebeat
+USER filebeat
 
 
 # FROM docker.elastic.co/beats/filebeat:7.9.2
