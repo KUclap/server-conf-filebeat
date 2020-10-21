@@ -8,72 +8,15 @@ filebeat.autodiscover:
     - type: docker
       hints.enabled: true
 
-# filebeat.inputs:
-#   - type: log
-#     paths:
-#       - '/usr/share/filebeat/mock-logs/*.log'
-
-      # - '/usr/share/filebeat/dockerlogs/data/*.log'
-      # - '/var/lib/docker/containers/*/*.log'
-  # - type: container
-  #   stream: all
-  #   paths:
-  #   - '/usr/share/dockerlogs/data/*/*.log'
-  #   json.message_key: log
-  #   json.keys_under_root: false
-  #   # json.add_error_key: true
-  #   exclude_files: ['\.gz$']
-  #   close_inactive: 2h
-  #   harvester_limit: 2
-  #   # processors:
-  #   # - add_docker_metadata: ~
-      
-
-  # - type: docker
-  #   processors:
-  #     - add_docker_metadata: ~
-  #   containers:
-  #     path: "/usr/share/dockerlogs/data"
-  #     stream: all
-  #     ids:
-  #       - "*"
-  #     cri.parse_flags: true
-  #     combine_partial: true
-  #     exclude_files: ['\.gz$']
-  #     close_inactive: 2h
-  #     # json.message_key: log
-  #     # json.keys_under_root: true
-  #     harvester_limit: 2
-
-  # - type: log
-  #   paths:
-  #   - '/usr/share/filebeat/mock-logs/some.log'
-    # json.message_key: log
-    # json.keys_under_root: true
-    # processors:
-    # - add_docker_metadata: ~
-  
 processors:
   - add_docker_metadata: ~
-  # - add_docker_metadata:
-  #     host: "unix:///var/run/docker.sock"
-
-
 
 output.kafka:
     hosts: ["10.3.133.190:9092"]
     topic: 'KUclap-logs'
     partition.round_robin:
       reachable_only: false
-    # required_acks: 1
+
     compression: gzip
     max_retries: 2
     max_message_bytes: 1000000
-    # max_message_bytes: 1000000
-  # topics:
-  #   - topic: "error"
-  #     when.contains:
-  #       message: "ERR"
-  #   - topic: "access"
-  #     when contains:
-  #       message: "\"GET .*\" 200" #Apache access logs use a GET request in combination with some HTTP data and a 200 code afterward. Backslashes in YAML indicate the following character should be read as text, not syntax
